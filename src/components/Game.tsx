@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Matter from "matter-js";
 
+const BASE_PATH = "/suika-game";
+
 const CHERRY = "cherry";
 const STRAWBERRY = "strawberry";
 const GRAPE = "grape";
@@ -78,7 +80,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: CHERRY_COLOR,
-        sprite: { texture: `/${CHERRY}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${CHERRY}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createStrawberry = (x: number, y: number, skeleton?: boolean) =>
@@ -89,7 +91,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: STRAWBERRY_COLOR,
-        sprite: { texture: `/${STRAWBERRY}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${STRAWBERRY}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createGrape = (x: number, y: number, skeleton?: boolean) =>
@@ -100,7 +102,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: GRAPE_COLOR,
-        sprite: { texture: `/${GRAPE}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${GRAPE}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createOrange = (x: number, y: number, skeleton?: boolean) =>
@@ -111,7 +113,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: ORANGE_COLOR,
-        sprite: { texture: `/${ORANGE}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${ORANGE}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createKaki = (x: number, y: number, skeleton?: boolean) =>
@@ -122,7 +124,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: KAKI_COLOR,
-        sprite: { texture: `/${KAKI}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${KAKI}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createApple = (x: number, y: number, skeleton?: boolean) =>
@@ -133,7 +135,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: APPLE_COLOR,
-        sprite: { texture: `/${APPLE}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${APPLE}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createPear = (x: number, y: number, skeleton?: boolean) =>
@@ -144,7 +146,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: PEAR_COLOR,
-        sprite: { texture: `/${PEAR}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${PEAR}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createPeach = (x: number, y: number, skeleton?: boolean) =>
@@ -155,7 +157,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: PEACH_COLOR,
-        sprite: { texture: `/${PEACH}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${PEACH}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createPineapple = (x: number, y: number, skeleton?: boolean) =>
@@ -166,7 +168,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: PINEAPPLE_COLOR,
-        sprite: { texture: `/${PINEAPPLE}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${PINEAPPLE}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createMelon = (x: number, y: number, skeleton?: boolean) =>
@@ -177,7 +179,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: MELON_COLOR,
-        sprite: { texture: `/${MELON}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${MELON}.png`, xScale: 1, yScale: 1 },
       },
     });
   const createWatermelon = (x: number, y: number, skeleton?: boolean) =>
@@ -188,7 +190,7 @@ export default function Game() {
       isSensor: skeleton,
       render: {
         fillStyle: WATERMELON_COLOR,
-        sprite: { texture: `/${WATERMELON}.png`, xScale: 1, yScale: 1 },
+        sprite: { texture: `${BASE_PATH}/${WATERMELON}.png`, xScale: 1, yScale: 1 },
       },
     });
 
@@ -306,7 +308,7 @@ export default function Game() {
 
       Bodies.rectangle(560, 360, 60, 400, {
         isStatic: true,
-        render: { sprite: { texture: "/revolution.png", xScale: 0.7, yScale: 0.7 } },
+        render: { sprite: { texture: `${BASE_PATH}/revolution.png`, xScale: 0.7, yScale: 0.7 } },
       }),
     ];
 
@@ -488,7 +490,7 @@ export default function Game() {
         </div>
         <div className="absolute top-2 right-0 w-24 h-24 rounded-full flex items-center justify-center bg-blue-200 border-4 border-blue-300">
           <p className="absolute top-0 w-full text-center font-bold text-blue-500">NEXT</p>
-          <img className="" src={`/${nextFruits[1]}.png`} alt="" />
+          <img className="" src={`${BASE_PATH}/${nextFruits[1]}.png`} alt="" />
         </div>
       </div>
       {isGmaeOver && (
