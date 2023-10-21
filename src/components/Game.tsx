@@ -514,6 +514,9 @@ export default function Game() {
       }
       `}</style>
       </div>
+      <div className="md:hidden text-center mt-4">
+        <button className="bg-blue-500 text-white p-4" onClick={handleClick}>落とす</button>
+      </div>
     </>
   );
 }
