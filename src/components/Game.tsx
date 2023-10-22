@@ -78,6 +78,7 @@ export default function Game() {
       label: CHERRY,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: CHERRY_COLOR,
         sprite: { texture: `${BASE_PATH}/${CHERRY}.png`, xScale: 1, yScale: 1 },
@@ -89,6 +90,7 @@ export default function Game() {
       label: STRAWBERRY,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: STRAWBERRY_COLOR,
         sprite: { texture: `${BASE_PATH}/${STRAWBERRY}.png`, xScale: 1, yScale: 1 },
@@ -100,6 +102,7 @@ export default function Game() {
       label: GRAPE,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: GRAPE_COLOR,
         sprite: { texture: `${BASE_PATH}/${GRAPE}.png`, xScale: 1, yScale: 1 },
@@ -111,6 +114,7 @@ export default function Game() {
       label: ORANGE,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: ORANGE_COLOR,
         sprite: { texture: `${BASE_PATH}/${ORANGE}.png`, xScale: 1, yScale: 1 },
@@ -122,6 +126,7 @@ export default function Game() {
       label: KAKI,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: KAKI_COLOR,
         sprite: { texture: `${BASE_PATH}/${KAKI}.png`, xScale: 1, yScale: 1 },
@@ -133,6 +138,7 @@ export default function Game() {
       label: APPLE,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: APPLE_COLOR,
         sprite: { texture: `${BASE_PATH}/${APPLE}.png`, xScale: 1, yScale: 1 },
@@ -144,6 +150,7 @@ export default function Game() {
       label: PEAR,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: PEAR_COLOR,
         sprite: { texture: `${BASE_PATH}/${PEAR}.png`, xScale: 1, yScale: 1 },
@@ -155,6 +162,7 @@ export default function Game() {
       label: PEACH,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: PEACH_COLOR,
         sprite: { texture: `${BASE_PATH}/${PEACH}.png`, xScale: 1, yScale: 1 },
@@ -166,6 +174,7 @@ export default function Game() {
       label: PINEAPPLE,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: PINEAPPLE_COLOR,
         sprite: { texture: `${BASE_PATH}/${PINEAPPLE}.png`, xScale: 1, yScale: 1 },
@@ -177,6 +186,7 @@ export default function Game() {
       label: MELON,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: MELON_COLOR,
         sprite: { texture: `${BASE_PATH}/${MELON}.png`, xScale: 1, yScale: 1 },
@@ -188,6 +198,7 @@ export default function Game() {
       label: WATERMELON,
       isStatic: skeleton,
       isSensor: skeleton,
+      collisionFilter: { category: 1 },
       render: {
         fillStyle: WATERMELON_COLOR,
         sprite: { texture: `${BASE_PATH}/${WATERMELON}.png`, xScale: 1, yScale: 1 },
@@ -339,6 +350,8 @@ export default function Game() {
           visible: false,
         },
       },
+      collisionFilter: { mask: 100 },
+      body: nextFruit
     });
 
     setMouse(_mouse);
