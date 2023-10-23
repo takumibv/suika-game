@@ -1,3 +1,9 @@
+
+
+
+https://github.com/takumibv/suika-game/assets/7642841/57f6b6ec-ced7-4445-8aa5-35d0aab8fa4e
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
